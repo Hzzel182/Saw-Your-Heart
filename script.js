@@ -1,5 +1,4 @@
 const audio = document.getElementById('audio');
-const audioSource = document.getElementById('audio-source');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const playPauseIcon = document.getElementById('play-pause-icon');
 const repeatBtn = document.getElementById('repeat-btn');
@@ -19,8 +18,8 @@ if (songArtist) document.querySelector('.track-artist').textContent = songArtist
 if (coverFile) document.getElementById('cover-img').src = coverFile;
 
 if (songFile) {
-    audioSource.src = songFile;
-    audio.load(); // Vital para que cargue correctamente el nuevo archivo multimedia
+    audio.src = songFile;
+    audio.load(); // Carga de forma limpia y directa el nuevo audio
 }
 
 // Inicializar estado de reproducción y autoplay
